@@ -8,6 +8,7 @@ public class MyappApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MyappApplication.class, args);
+		//feature_220124_psj_git_test_commit
 	}
 
 }
