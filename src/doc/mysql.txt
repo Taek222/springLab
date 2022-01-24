@@ -1,0 +1,26 @@
+- download
+Download
+
+- mac의 경우
+mysql-8.0.27-macos11-x86_64.dmg 으로 설치해야함.
+https://dev.mysql.com/downloads/file/?id=508094
+root 비번
+비12!@
+
+
+- db 생성, 테이블 생성 초기화
+https://it-g-house.tistory.com/entry/MySQL-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4Database-%ED%85%8C%EC%9D%B4%EB%B8%94Table-%EB%A7%8C%EB%93%A4%EA%B8%B0
+
+- root 로 로그인
+mysql -u root -p
+
+
+- db 생성
+create database wink_dev;
+
+create user 'wink_app'@'%' identified by 'qlqjs12!@';
+grant all privileges on wink_dev.* to 'wink_app'@'%';
+
+
+create user 'wink_admin'@'%' identified by 'qlqjs12!@';
+grant all privileges on wink_dev.* to 'wink_admin'@'%';
