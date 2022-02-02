@@ -1,6 +1,7 @@
 package kr.co.soojintaek.mvc.repository;
 
 import kr.co.soojintaek.mvc.domain.Board;
+import kr.co.soojintaek.mvc.parameter.BoardParameter;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -18,7 +19,7 @@ public interface BoardRepository {
 
     List<Board> getList();
     Board get(int boardSeq);
-    void save(Board board);
+    void save(BoardParameter board);
     void delete(int boardSeq);
-    void update(Board board);
+    void update(BoardParameter board);
 }

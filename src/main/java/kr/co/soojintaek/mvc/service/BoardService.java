@@ -1,6 +1,7 @@
 package kr.co.soojintaek.mvc.service;
 
 import kr.co.soojintaek.mvc.domain.Board;
+import kr.co.soojintaek.mvc.parameter.BoardParameter;
 import kr.co.soojintaek.mvc.repository.BoardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -43,7 +44,7 @@ public class BoardService {
     * 기능 : 게시글 저장 / 수정
     * 작성일 2022-01-26
     **/
-    public void save(Board parameter){
+    public void save(BoardParameter parameter){
         //조회하여 리턴된 정보 있으면 update 없으면 insert
         Board board = repository.get(parameter.getBoardSeq());
         if(board == null){
