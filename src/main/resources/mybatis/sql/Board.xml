@@ -38,6 +38,24 @@
         )
     </insert>
 
+    <insert id="saveList" parameterMap="map">
+        INSERT INTO T_BOARD
+        (
+        TITLE,
+        CONTENTS,
+        REG_DATE
+        )
+        VALUES
+        <foreach collection="boardList" item="board" separator=",">
+        (
+        #{title},
+        #{contents},
+        NOW()
+        )
+        </foreach>
+    </insert>
+
+
     <update id="update" parameterType="kr.co.soojintaek.mvc.parameter.BoardParameter">
         UPDATE T_BOARD
         SET

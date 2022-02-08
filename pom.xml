@@ -85,6 +85,13 @@
 			<version>1.16</version>
 		</dependency>
 		<!--logback 설정-->
+
+		<!-- 대용량처리를 위한 랜덤 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+		<!-- 대용량처리를 위한 랜덤 -->
 	</dependencies>
 
 	<build>
