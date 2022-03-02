@@ -12,4 +12,6 @@ public class Board {
     private String contents;
     private Date regDate;
 
+    public Board() {
+    }
 }
