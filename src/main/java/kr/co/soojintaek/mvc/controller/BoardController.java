@@ -61,15 +61,12 @@ public class BoardController {
             @ApiImplicitParam(name="boardSeq", value = "게시물 번호", example = "1")
     })
     @ResponseBody
-    public BaseResponse<Board> get(@PathVariable int boardSeq, @ModelAttribute BaseResponse response){
-        /*Board board = boardService.get(boardSeq);
+    public BaseResponse<Board> get(@PathVariable int boardSeq){
+        Board board = boardService.get(boardSeq);
         if(board == null){
             throw new BaseException(BaseResponseCode.DATA_IS_NULL, new String[]{"게시물"});
         }
         return new BaseResponse<Board>(boardService.get(boardSeq));
-
-         */
-        return response;//new BaseResponse<>(board)
     }
 
     /**
