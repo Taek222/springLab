@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.soojintaek.mvc.repository.TanentRepository">
+
+    <select id="getTanentDetail" parameterType="String" resultType="kr.co.soojintaek.mvc.domain.Tanent">
+        SELECT
+        E.COMPANY_NO,
+        E.COMPANY_NAME,
+        E.DOMAIN,
+        E.PHONE,
+        E.EMAIL,
+        E.REG_DATE,
+        E.REG_USR,
+        E.MOD_DATE,
+        E.MOD_USR
+        FROM T_TENANT E
+        WHERE E.DOMAIN = #{domain}
+    </select>
+
+</mapper>
